@@ -66,7 +66,7 @@ apt-get install -y \
 echo
 echo Cloning repositories
 echo
-https://github.com/jaypy-h/facebook-torch-library.git $dir
+git clone https://github.com/jaypy-h/facebook-torch-library.git $dir
 
 echo
 echo Building folly
@@ -123,6 +123,8 @@ echo
 
 cd $dir/fbcunn
 luarocks make rocks/fbcunn-scm-1.rockspec
+
+rm -fr $dir
 
 echo
 echo 'All done!'
